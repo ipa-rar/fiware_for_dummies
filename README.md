@@ -1,18 +1,33 @@
-# Fiware: Orion Context Broker
+# FIWARE
+- FIWARE is an open source initiative defining a universal set of standards for context data management which facilitate the development of Smart Solutions for different domains such as Smart Cities, Smart Industry, Smart Agrifood, and Smart Energy.
+-  In any smart solution there is a need to gather and manage context information, processing that information and informing external actors, enabling them to actuate and therefore alter or enrich the current context.
+- The FIWARE Context Broker component is the core component of any “Powered by FIWARE” platform. It enables the system to perform updates and access to the current state of context
+![](https://www.fiware.org/wp-content/uploads/2019/09/Screen-Shot-2019-09-25-at-15.30.33.png)
+# Orion Context Broker
+- Orion is a C++ implementation of the NGSIv2 REST API binding developed as a part of the FIWARE platform.
+- The Orion Context Broker is an implementation of the Publish/Subscribe Context Broker, providing an NGSI interface. Using this interface, clients can do several operations:
+  - Query context information. The Orion Context Broker stores context information updated from applications, so queries are resolved based on that information. Context information consists on entities (e.g. a car) and their attributes (e.g. the speed or location of the car).
+  - Update context information, e.g. send updates of temperature
+  - Get notified when changes on context information take place (e.g. the temperature has changed) 
+  - Register context provider applications, e.g. the provider for the temperature sensor within a room
 
-- The Orion Context Broker is a service that based on the OMA NGSI 9/10 standard and can handle sending and receiving contextual information. 
-- Primarily, to handle a large number of messages from entities and manage updates, queries, and also handle data subscriptions from the entities. 
 
 - Currently, the Orion Context Broker relies on open source MongoDB technology to keep persistence of the context data it holds. Therefore, the architecture will consist of two elements:
 
-    - The Orion Context Broker server which will receive requests using NGSI
+    - The Orion Context Broker server which will receive requests using NGSI v2
     - The underlying MongoDB database associated to the Orion Context Broker server
 
 Since all interactions between the two elements are initiated by HTTP requests, the entities can be containerized and run from exposed ports. 
 
 ![](https://fiware.github.io/tutorials.Getting-Started/img//architecture.png)
 
-## Getting started
+# FIROS
+
+![](https://raw.githubusercontent.com/iml130/firos/master/doc/media/firos.png)
+
+
+
+# Getting started 
 ````
 docker pull mongo:3.6
 docker pull fiware/orion
