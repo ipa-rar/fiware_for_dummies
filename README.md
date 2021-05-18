@@ -25,7 +25,56 @@ Since all interactions between the two elements are initiated by HTTP requests, 
 
 ![](https://raw.githubusercontent.com/iml130/firos/master/doc/media/firos.png)
 
+## config.json
+This contains all basic FIROS-Configuration-Parameters which can be manipulated by the user. 
+````
+{
+    "environment": "test",
 
+    "test": {
+        "context_type": "MyRobotContextType",
+        "server": {
+            "port": 10100
+        },
+        "contextbroker": {
+            "address": "192.168.0.97",
+            "port": 1026,
+            "subscription": {
+                "throttling": "0",
+                "subscription_length": 300,
+                "subscription_refresh_delay": 0.9
+            }
+        },
+        "endpoint": {
+            "address": "10.16.55.3",
+            "port": 1234
+        },
+        "log_level": "INFO"
+    }
+}
+````
+## robots.json
+This json in particular listens to the rostopic ``/turtle1/pose `` with the message type ``"turtlesim/Pose"``  and sends all retreived data to the specified server in the Non-ROS-World. It publishes data into ``/turtle1/cmd_vel`` after receiving a notifcation of the server from the Non-ROS-World from type ``geometry_msgs/Twist``.
+````
+{
+    "/turtle1/cmd_vel": ["geometry_msgs/Twist", "publisher"],
+    "/turtle1/pose": ["turtlesim/Pose", "subscriber"]
+}
+````
+### The publish-subscribe-terminology is at the Non-ROS-World 
+
+![](https://firos.readthedocs.io/en/latest/media/pubsub-Illustration.png)
+
+The green arrows are specified by the config.json (and whitelist.json). The corresponding black arrows are derived from the green arrows, which happens automatically.
+
+## whitelist.json
+As the name suggests, the whitelist.json functions as a whitelist to let FIROS know which messages it should keep track of. 
+````
+{
+    "publisher": [".*/pose"],
+    "subscriber": [".*/cmd_vel"]
+}
+````
 
 # Getting started 
 ````
@@ -83,5 +132,9 @@ curl --location --request GET 'http://localhost:1026/version/'
 curl --location --request GET 'http://localhost:1026/v2/entities'
 ````
 
-
+# References
+- [Swagger - FIWARE-NGSI v2 Specification](https://swagger.lab.fiware.org/#/)
+- [NGSI-V2 step by step ](https://fiware-tutorials.readthedocs.io/en/latest/getting-started/index.html)
+- [FIROS readthedocs](https://firos.readthedocs.io/en/latest/install/install.html)
+- [Python request module - RealPython](https://realpython.com/python-requests/)
 
