@@ -19,11 +19,15 @@
 
 Since all interactions between the two elements are initiated by HTTP requests, the entities can be containerized and run from exposed ports. 
 
-![](https://fiware.github.io/tutorials.Getting-Started/img//architecture.png)
+<p align="center">
+  <img width="660" src="https://fiware.github.io/tutorials.Getting-Started/img//architecture.png">
+</p>
 
 # FIROS
 
-![](https://raw.githubusercontent.com/iml130/firos/master/doc/media/firos.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/iml130/firos/master/doc/media/firos.png">
+</p>
 
 ## config.json
 This contains all basic FIROS-Configuration-Parameters which can be manipulated by the user. 
@@ -63,7 +67,9 @@ This json in particular listens to the rostopic ``/turtle1/pose `` with the mess
 ````
 ### The publish-subscribe-terminology is at the Non-ROS-World 
 
-![](https://firos.readthedocs.io/en/latest/media/pubsub-Illustration.png)
+<p align="center">
+  <img width="460" src="https://firos.readthedocs.io/en/latest/media/pubsub-Illustration.png">
+</p>
 
 The green arrows are specified by the config.json (and whitelist.json). The corresponding black arrows are derived from the green arrows, which happens automatically.
 
