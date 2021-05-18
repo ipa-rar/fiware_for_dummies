@@ -85,6 +85,10 @@ As the name suggests, the whitelist.json functions as a whitelist to let FIROS k
     "subscriber": [".*/cmd_vel"]
 }
 ````
+<p align="center">
+  <img width="550" src="images/architecture.PNG">
+</p>
+
 
 # Getting started 
 ````
