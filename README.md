@@ -2,7 +2,11 @@
 - FIWARE is an open source initiative defining a universal set of standards for context data management which facilitate the development of Smart Solutions for different domains such as Smart Cities, Smart Industry, Smart Agrifood, and Smart Energy.
 -  In any smart solution there is a need to gather and manage context information, processing that information and informing external actors, enabling them to actuate and therefore alter or enrich the current context.
 - The FIWARE Context Broker component is the core component of any “Powered by FIWARE” platform. It enables the system to perform updates and access to the current state of context
-![](https://www.fiware.org/wp-content/uploads/2019/09/Screen-Shot-2019-09-25-at-15.30.33.png)
+
+<p align="center">
+  <img  src="https://www.fiware.org/wp-content/uploads/2019/09/Screen-Shot-2019-09-25-at-15.30.33.png">
+</p>
+
 # Orion Context Broker
 - Orion is a C++ implementation of the NGSIv2 REST API binding developed as a part of the FIWARE platform.
 - The Orion Context Broker is an implementation of the Publish/Subscribe Context Broker, providing an NGSI interface. Using this interface, clients can do several operations:
