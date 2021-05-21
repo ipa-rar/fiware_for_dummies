@@ -151,4 +151,7 @@ curl --location --request GET 'http://localhost:1026/v2/entities'
 - [NGSI-V2 step by step ](https://fiware-tutorials.readthedocs.io/en/latest/getting-started/index.html)
 - [FIROS readthedocs](https://firos.readthedocs.io/en/latest/install/install.html)
 - [Python request module - RealPython](https://realpython.com/python-requests/)
+- [Intercommunication between ROS2 and FIWARE ](https://github.com/eProsima/FIROS2)
+- [RMAP_EU - Robot agent node](https://github.com/ramp-eu/Robot_Agent_Node/tree/13f24632699c5ca9ede904a065326eacefabed6e)
+- [RAMP](https://github.com/ramp-eu/RAMP/tree/master/logistics)
 
